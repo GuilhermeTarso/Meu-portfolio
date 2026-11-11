@@ -3,161 +3,290 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Portfólio Pessoal</title>
-  <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" />
+  <title>Portfólio Pessoal | Guilherme de Tarso</title>
+  <!-- Bootstrap CSS (Atualizado para a versão solicitada 5.3.8) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" />
   <!-- Bootstrap Icons -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
-  <link rel="stylesheet" href="estilo.css">
+  <link rel="stylesheet" href="estilo.css" />
 </head>
-<body class="bg-light">
+<body class="bg-light" data-bs-spy="scroll" data-bs-target="#navegacao-principal" data-bs-root-margin="0px 0px -40%">
 
-<!-- HEADER COM MENU DINÂMICO -->
-  <header class="bg-dark text-white py-3 sticky-top shadow">
-    <div class="container d-flex align-items-center justify-content-between">
-      <h1 class="h4 mb-0">Guilherme de Tarso</h1>
-      
-      <!-- Menu de navegação -->
-      <nav id="menu-principal" aria-label="Menu Principal">
-        <ul class="nav">
-          <li class="nav-item"><a href="#sobre" class="nav-link text-white px-2 rounded hover-link"><i class="bi bi-person-circle"></i> Sobre</a></li>
-          <li class="nav-item"><a href="#projetos" class="nav-link text-white px-2 rounded hover-link"><i class="bi bi-code-slash"></i> Projetos</a></li>
-          <li class="nav-item"><a href="#contato" class="nav-link text-white px-2 rounded hover-link"><i class="bi bi-envelope"></i> Contato</a></li>
-        </ul>
-      </nav>
-    </div>
+  <!-- CABEÇALHO E NAVBAR -->
+  <header class="sticky-top shadow">
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark" id="navegacao-principal">
+      <div class="container d-flex align-items-center justify-content-between">
+        <!-- Único H1 da página, preservando o tamanho visual h4 -->
+        <h1 class="h4 mb-0">
+          <a class="navbar-brand m-0" href="#">Guilherme de Tarso</a>
+        </h1>
+        
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuCollapse" aria-controls="menuCollapse" aria-expanded="false" aria-label="Alternar menu de navegação">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse justify-content-end" id="menuCollapse">
+          <ul class="navbar-nav align-items-md-center">
+            <li class="nav-item">
+              <a href="#sobre" class="nav-link px-3 rounded hover-link"><i class="bi bi-person-circle" aria-hidden="true"></i> Sobre</a>
+            </li>
+            <li class="nav-item">
+              <a href="#profissional" class="nav-link px-3 rounded hover-link"><i class="bi bi-briefcase" aria-hidden="true"></i> Profissional</a>
+            </li>
+            <li class="nav-item">
+              <a href="#academico" class="nav-link px-3 rounded hover-link"><i class="bi bi-journal-text" aria-hidden="true"></i> Acadêmico</a>
+            </li>
+            <li class="nav-item">
+              <a href="#treinamentos" class="nav-link px-3 rounded hover-link"><i class="bi bi-award" aria-hidden="true"></i> Treinamentos</a>
+            </li>
+            <li class="nav-item">
+              <a href="#contato" class="nav-link px-3 rounded hover-link"><i class="bi bi-envelope" aria-hidden="true"></i> Contato</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
   </header>
 
-<!-- SOBRE MIM -->
-  <section id="sobre" class="container py-5">
-    <div class="row align-items-center">
-      <div class="col-md-4 text-center mb-4 mb-md-0">
-        <img src="Gemini_Generated_Image_m24j24m24j24m24j.jfif.jfif" alt="Fotografia de perfil de Guilherme de Tarso" class="rounded-circle img-fluid" style="max-width: 200px;" />
+  <!-- CONTEÚDO PRINCIPAL -->
+  <main>
+    <!-- SOBRE MIM -->
+    <section id="sobre" class="container py-5">
+      <div class="row align-items-center">
+        <div class="col-md-4 text-center mb-4 mb-md-0">
+          <img src="Gemini_Generated_Image_m24j24m24j24m24j.jfif.jfif" alt="Fotografia de perfil de Guilherme de Tarso" class="rounded-circle img-fluid shadow" style="max-width: 200px;" />
+        </div>
+        <div class="col-md-8">
+          <h2 class="mb-3">Sobre mim</h2>
+          <p class="fs-5">Olá! Sou graduado em Engenharia Civil e acadêmico de Análise e Desenvolvimento de Sistemas (ADS). Direciono minha carreira para a interseção entre tecnologia, Suporte a Sistemas, Customer Operations e processos operacionais de plataformas SaaS.</p>
+          <p>Possuo mais de três anos de experiência em atendimento corporativo e operações integradas, período em que atuei com triagem, análise de solicitações, troubleshooting, documentação de chamados e escalonamento, utilizando ferramentas como o Salesforce Service Cloud (perfil de usuário). Meu objetivo é aplicar minha capacidade analítica e raciocínio estruturado para apoiar clientes B2B, melhorar processos internos e otimizar operações de atendimento.</p>
+        </div>
       </div>
-      <div class="col-md-8">
-        <h2>Sobre mim</h2>
-        <p>Olá! Sou estudante de desenvolvimento web e este é meu primeiro portfólio. Gosto de aprender novas tecnologias e construir soluções criativas para a web. Tenho interesse em front-end, usabilidade e acessibilidade digital. Estou constantemente em busca de novos desafios para aplicar e aperfeiçoar minhas habilidades técnicas.</p>
-      </div>
-    </div>
-  </section>
+    </section>
 
-<!-- PROJETOS -->
-  <section id="projetos" class="container py-5 bg-white">
-    <div class="container text-center mb-5">
-      <h2>Projetos</h2>
-      <p class="text-muted">Conheça alguns dos projetos que desenvolvi e as tecnologias que utilizo.</p>
-    </div>
-    
-    <div class="row">
-      <!-- CARD PROJETO 1 -->
-      <div class="col-md-4 mb-4">
-        <div class="card h-100 shadow-sm">
-          <div class="card-body">
-            <div class="d-flex align-items-center mb-3">
-              <i class="bi bi-list-check fs-2 text-primary me-2"></i>
-              <h5 class="card-title mb-0">Lista Interativa</h5>
+    <!-- NAVEGAÇÃO DOS CARDS PRINCIPAIS -->
+    <section class="container py-4" aria-label="Acesso rápido às áreas do portfólio">
+      <div class="row text-center">
+        <!-- CARD 1: PROFISSIONAL -->
+        <div class="col-md-4 mb-4">
+          <a href="#profissional" class="text-decoration-none card-link-wrapper d-block h-100">
+            <div class="card h-100 shadow-sm hover-card bg-primary text-white border-0">
+              <div class="card-body py-4">
+                <i class="bi bi-briefcase fs-1 mb-3 d-block" aria-hidden="true"></i>
+                <h3 class="card-title h5 fw-bold">Portfólios Profissionais</h3>
+                <p class="card-text text-light">Cases práticos focados em Customer Operations, CRM e operações SaaS.</p>
+              </div>
             </div>
-            <p class="card-text">Uma aplicação web simples para cadastro e organização de tarefas em tempo real, criada para praticar manipulação do DOM.</p>
-            <span class="badge bg-secondary">HTML5</span>
-            <span class="badge bg-secondary">JavaScript</span>
+          </a>
+        </div>
+
+        <!-- CARD 2: ACADÊMICO -->
+        <div class="col-md-4 mb-4">
+          <a href="#academico" class="text-decoration-none text-dark card-link-wrapper d-block h-100">
+            <div class="card h-100 shadow-sm hover-card border-secondary">
+              <div class="card-body py-4">
+                <i class="bi bi-journal-text fs-1 mb-3 d-block text-secondary" aria-hidden="true"></i>
+                <h3 class="card-title h5 fw-bold">Projetos Acadêmicos</h3>
+                <p class="card-text text-muted">Trabalhos acadêmicos e atividades da graduação em ADS.</p>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <!-- CARD 3: TREINAMENTOS -->
+        <div class="col-md-4 mb-4">
+          <a href="#treinamentos" class="text-decoration-none text-dark card-link-wrapper d-block h-100">
+            <div class="card h-100 shadow-sm hover-card border-success">
+              <div class="card-body py-4">
+                <i class="bi bi-award fs-1 mb-3 d-block text-success" aria-hidden="true"></i>
+                <h3 class="card-title h5 fw-bold">Treinamentos Técnicos</h3>
+                <p class="card-text text-muted">Cursos, laboratórios e exercícios para aprimoramento técnico contínuo.</p>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ÁREA: PORTFÓLIOS PROFISSIONAIS -->
+    <section id="profissional" class="container py-5">
+      <div class="border-bottom pb-3 mb-4">
+        <h2><i class="bi bi-briefcase me-2 text-primary" aria-hidden="true"></i> Portfólios Profissionais</h2>
+        <p class="text-muted">Projetos práticos voltados à estruturação de suporte, relacionamento com clientes e tecnologia empresarial.</p>
+      </div>
+
+      <!-- PORTFÓLIO 1.0 -->
+      <div class="card shadow-sm mb-4 border-0 bg-white">
+        <div class="card-header bg-light">
+          <h3 class="mb-0 h4">Portfólio Profissional 1.0 <span class="badge bg-warning text-dark ms-2 fs-6">Em estruturação</span></h3>
+        </div>
+        <div class="card-body">
+          <p><strong>Cenário:</strong> Estudos de caso simulados para a "EdificaSaaS", uma plataforma fictícia de gestão de obras focada no público B2B. A iniciativa visa desenhar e otimizar processos de atendimento e sucesso do cliente.</p>
+          <div class="list-group">
+            <div class="list-group-item">
+              <div class="d-flex w-100 justify-content-between align-items-center">
+                <h4 class="mb-1 h6 fw-bold">Case 01 — Salesforce Administration</h4>
+                <span class="badge bg-secondary rounded-pill">Status: Planejado</span>
+              </div>
+              <p class="mb-1 text-muted small">Laboratório de configuração de estrutura de dados, usuários, perfis, objetos, automações e relatórios. (Ambiente: Trailhead Playground).</p>
+            </div>
+            <div class="list-group-item">
+              <div class="d-flex w-100 justify-content-between align-items-center">
+                <h4 class="mb-1 h6 fw-bold">Case 02 — Zendesk Support Operations</h4>
+                <span class="badge bg-secondary rounded-pill">Status: Planejado</span>
+              </div>
+              <p class="mb-1 text-muted small">Mapeamento de operação N1 e N2, criação de filas, SLA, Help Center e macros de atendimento.</p>
+            </div>
+            <div class="list-group-item">
+              <div class="d-flex w-100 justify-content-between align-items-center">
+                <h4 class="mb-1 h6 fw-bold">Case 03 — HubSpot CRM</h4>
+                <span class="badge bg-secondary rounded-pill">Status: Planejado</span>
+              </div>
+              <p class="mb-1 text-muted small">Estudo comercial e transição de processos de Vendas para Onboarding e Customer Success.</p>
+            </div>
+            <div class="list-group-item">
+              <div class="d-flex w-100 justify-content-between align-items-center">
+                <h4 class="mb-1 h6 fw-bold">Case 04 — Kanban e Melhoria Contínua</h4>
+                <span class="badge bg-secondary rounded-pill">Status: Planejado</span>
+              </div>
+              <p class="mb-1 text-muted small">Planejamento de um quadro com dupla finalidade: gerenciar a execução dos próprios cases do Portfólio 1.0 e demonstrar a aplicação de gestão visual, limites de WIP e acompanhamento de demandas operacionais simuladas da EdificaSaaS.</p>
+            </div>
+            <div class="list-group-item">
+              <div class="d-flex w-100 justify-content-between align-items-center">
+                <h4 class="mb-1 h6 fw-bold">Case 05 — Inteligência Artificial aplicada</h4>
+                <span class="badge bg-secondary rounded-pill">Status: Planejado</span>
+              </div>
+              <p class="mb-1 text-muted small">Aplicação de IA para apoiar rotinas de triagem, categorização e sugestão de rotas de solução em tickets de suporte.</p>
+            </div>
           </div>
         </div>
       </div>
+      
+      <!-- PORTFÓLIO 2.0 -->
+      <div class="card shadow-sm border-0 bg-light">
+        <div class="card-body text-center py-4">
+          <h3 class="h5 text-muted mb-2"><i class="bi bi-hourglass-split" aria-hidden="true"></i> Portfólio Profissional 2.0</h3>
+          <p class="text-muted mb-0 small">Evolução futura. Espaço reservado para documentar a expansão de competências tecnológicas.</p>
+        </div>
+      </div>
+    </section>
 
-      <!-- CARD PROJETO 2 -->
-      <div class="col-md-4 mb-4">
-        <div class="card h-100 shadow-sm">
-          <div class="card-body">
-            <div class="d-flex align-items-center mb-3">
-              <i class="bi bi-briefcase fs-2 text-primary me-2"></i>
-              <h5 class="card-title mb-0">Portfólio Pessoal</h5>
+    <!-- ÁREA: PROJETOS ACADÊMICOS -->
+    <section id="academico" class="container py-5 bg-white">
+      <div class="border-bottom pb-3 mb-4">
+        <h2><i class="bi bi-journal-text me-2 text-secondary" aria-hidden="true"></i> Projetos Acadêmicos e Laboratórios</h2>
+        <p class="text-muted">Atividades avaliativas e exercícios estruturados do curso de Análise e Desenvolvimento de Sistemas.</p>
+      </div>
+
+      <!-- Desafio ABC Tech -->
+      <div class="card shadow-sm mb-4">
+        <div class="card-body">
+          <div class="d-flex align-items-center mb-2">
+            <i class="bi bi-cart4 fs-3 text-secondary me-2" aria-hidden="true"></i>
+            <h3 class="card-title h5 mb-0">Desafio Profissional: ABC Tech</h3>
+          </div>
+          <p class="card-text text-muted mt-2"><strong>Contexto da disciplina:</strong> Introdução ao Desenvolvimento de Sistemas Web. O trabalho foca no planejamento lógico de funções para um carrinho de compras em uma empresa fictícia de e-commerce. A atividade envolve o planejamento da arquitetura de <strong>módulos JavaScript com export/import</strong>, manipulação do DOM com <strong>replaceChildren()</strong>, representação de <strong>valores monetários em centavos inteiros</strong> e comunicação de atualizações acessíveis via <strong>aria-live</strong>. O trabalho consistiu na especificação e planejamento arquitetural, sem a implementação da aplicação funcional completa.</p>
+        </div>
+      </div>
+
+      <!-- Exercício: Lista Interativa -->
+      <div class="card shadow-sm mb-4">
+        <div class="card-body">
+          <div class="d-flex align-items-center mb-3">
+            <i class="bi bi-list-check fs-3 text-secondary me-2" aria-hidden="true"></i>
+            <h3 class="card-title h5 mb-0">Exercício Técnico: Lista Interativa</h3>
+          </div>
+          <p class="card-text text-muted">Atividade focada na prática de HTML5 e interatividade por JavaScript (manipulação do DOM). Permite adição e remoção em client-side, sem persistência em banco de dados.</p>
+          
+          <div class="bg-light p-3 rounded border">
+            <!-- Região acessível para anunciar atualizações -->
+            <div id="status-lista" class="visually-hidden" aria-live="polite"></div>
+            
+            <div class="mb-3">
+              <label for="entrada" class="form-label fw-bold">Nova tarefa:</label>
+              <div class="input-group">
+                <input type="text" id="entrada" class="form-control" placeholder="Digite uma tarefa e pressione Enter..." />
+                <button type="button" class="btn btn-secondary" id="adicionar">Adicionar</button>
+              </div>
             </div>
-            <p class="card-text">Esta vitrine digital que você está desenvolvendo com foco em responsividade, usabilidade e boas práticas.</p>
-            <span class="badge bg-primary">Bootstrap</span>
-            <span class="badge bg-secondary">HTML5</span>
+            <ul id="lista" class="list-group"></ul>
           </div>
         </div>
       </div>
+    </section>
 
-      <!-- CARD PROJETO 3 -->
-      <div class="col-md-4 mb-4">
-        <div class="card h-100 shadow-sm">
-          <div class="card-body">
-            <div class="d-flex align-items-center mb-3">
-              <i class="bi bi-gear fs-2 text-primary me-2"></i>
-              <h5 class="card-title mb-0">Projetos Futuros</h5>
+    <!-- ÁREA: TREINAMENTOS TÉCNICOS -->
+    <section id="treinamentos" class="container py-5">
+      <div class="border-bottom pb-3 mb-4">
+        <h2><i class="bi bi-award me-2 text-success" aria-hidden="true"></i> Treinamentos Técnicos</h2>
+        <p class="text-muted">Histórico de estudos, cursos e laboratórios (sem vínculo de experiência profissional).</p>
+      </div>
+      
+      <div class="row">
+        <div class="col-md-6 mb-3">
+          <div class="card h-100 border-0 shadow-sm">
+            <div class="card-body">
+              <h4 class="fw-bold h5">Plataformas & Processos (SaaS / CRM)</h4>
+              <ul class="mb-0 text-muted">
+                <li>Fundamentos de CRM e Zendesk (Estudos planejados)</li>
+              </ul>
             </div>
-            <p class="card-text">Novos desafios de estudos, focados em frameworks modernos como React e soluções complexas no ecossistema front-end.</p>
-            <span class="badge bg-secondary">React</span>
-            <span class="badge bg-secondary">API</span>
+          </div>
+        </div>
+        <div class="col-md-6 mb-3">
+          <div class="card h-100 border-0 shadow-sm">
+            <div class="card-body">
+              <h4 class="fw-bold h5">Linguagens, Web & APIs</h4>
+              <ul class="mb-0 text-muted">
+                <li>HTML, CSS e JavaScript (Estudos acadêmicos em andamento)</li>
+                <li>SQL e PostgreSQL (Planejado)</li>
+                <li>HTTP, APIs REST e Postman (Planejado)</li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-<!-- SEÇÃO DA LISTA INTERATIVA -->
-<section class="container py-4">
-  <div class="card p-4 shadow-sm">
-    <h3>Minha Lista de Tarefas / Projetos</h3>
-    <div class="input-group mb-3 mt-3">
-      <input type="text" id="entrada" class="form-control" placeholder="Digite um novo item..." />
-      <button class="btn btn-primary" id="adicionar">Adicionar</button>
-    </div>
-    <ul id="lista" class="list-group"></ul>
-  </div>
-</section>
+    <!-- CONTATO -->
+    <section id="contato" class="container py-5 bg-white">
+      <div class="row justify-content-center text-center">
+        <div class="col-md-8">
+          <h2><i class="bi bi-envelope me-2" aria-hidden="true"></i> Contato</h2>
+          <p class="fs-5 mb-4">Interessado em falar sobre Suporte a Sistemas, Customer Operations ou oportunidades em empresas de tecnologia? Envie-me um e-mail.</p>
+          
+          <a href="mailto:guilherme-tarso@hotmail.com" class="btn btn-primary btn-lg px-4 py-2 shadow-sm rounded-pill mb-5">
+            <i class="bi bi-send-fill me-2" aria-hidden="true"></i> Enviar E-mail
+          </a>
 
-<!-- CONTATO -->
-<section id="contato" class="container py-5">
-  <h2 class="mb-4">Contato</h2>
-  <form id="formContato">
-    <div class="mb-3">
-      <label for="nome" class="form-label">Nome</label>
-      <input type="text" class="form-control" id="nome" name="nome" placeholder="Digite seu nome" required />
-    </div>
-    <div class="mb-3">
-      <label for="email" class="form-label">E-mail</label>
-      <input type="email" class="form-control" id="email" name="email" placeholder="seuemail@exemplo.com" required />
-    </div>
-    <div class="mb-3">
-      <label for="mensagem" class="form-label">Mensagem</label>
-      <textarea class="form-control" id="mensagem" name="mensagem" rows="4" placeholder="Escreva sua mensagem..." required></textarea>
-    </div>
-    <button type="submit" class="btn btn-primary">Enviar</button>
-  </form>
-</section>
-
-<!-- CONTATO -->
-  <section id="redes" class="container py-5">
-    <div class="row justify-content-center">
-      <div class="col-md-6 text-center">
-        <h2>Redes Profissionais</h2>
-        <p class="text-muted">Acompanhe meus projetos ou fale diretamente comigo:</p>
-        
-        <div class="d-flex justify-content-center gap-3 fs-3">
-          <a href="mailto:guilherme-tarso@hotmail.com" class="text-dark" title="E-mail"><i class="bi bi-envelope-fill"></i></a>
-          <a href="https://www.linkedin.com/in/guilherme-de-tarso/" target="_blank" class="text-dark" title="LinkedIn"><i class="bi bi-linkedin"></i></a>
-          <a href="https://github.com/GuilhermeTarso" target="_blank" class="text-dark" title="GitHub"><i class="bi bi-github"></i></a>
-          <a href="https://wa.me/5583999897759" target="_blank" rel="noopener noreferrer" class="text-dark" title="WhatsApp" aria-label="Enviar mensagem pelo WhatsApp"><i class="bi bi-whatsapp" aria-hidden="true"></i></a>
-
+          <div class="pt-4 border-top">
+            <h3 class="mb-3 h4">Redes Profissionais</h3>
+            <div class="d-flex justify-content-center gap-4 fs-2">
+              <a href="https://www.linkedin.com/in/guilherme-de-tarso/" target="_blank" class="text-dark hover-icon" aria-label="Visitar meu perfil no LinkedIn"><i class="bi bi-linkedin" aria-hidden="true"></i></a>
+              <a href="https://github.com/GuilhermeTarso" target="_blank" class="text-dark hover-icon" aria-label="Visitar meu perfil no GitHub"><i class="bi bi-github" aria-hidden="true"></i></a>
+              <a href="https://wa.me/5583999897759" target="_blank" rel="noopener noreferrer" class="text-dark hover-icon" aria-label="Enviar mensagem no WhatsApp"><i class="bi bi-whatsapp" aria-hidden="true"></i></a>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
+  </main>
 
   <!-- RODAPÉ -->
-  <footer class="bg-dark text-white text-center py-3">
-    <p class="mb-0">&copy; 2026 Guilherme de Tarso. Todos os direitos reservados.</p>
+  <footer class="bg-dark text-white text-center py-4">
+    <div class="container">
+      <p class="mb-0">&copy; 2026 Guilherme de Tarso. Portfólio Hub - Versão Candidata 1.1.</p>
+    </div>
   </footer>
 
-<!-- BOTÃO VOLTAR AO TOPO -->
-  <a href="#" id="btn-topo" class="btn btn-dark position-fixed bottom-0 end-0 m-4 rounded-circle shadow" style="z-index: 1000;" title="Voltar ao topo">
-    <i class="bi bi-arrow-up"></i>
+  <!-- BOTÃO VOLTAR AO TOPO -->
+  <a href="#" id="btn-topo" class="btn btn-dark position-fixed bottom-0 end-0 m-4 rounded-circle shadow d-flex align-items-center justify-content-center" style="width: 50px; height: 50px; z-index: 1000;" aria-label="Voltar ao topo">
+    <i class="bi bi-arrow-up fs-5" aria-hidden="true"></i>
   </a>
 
+  <!-- Bootstrap JS Bundle (Contém Popper, ScrollSpy e Collapse) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
   <script src="script.js"></script>
-
 
 </body>
 </html>

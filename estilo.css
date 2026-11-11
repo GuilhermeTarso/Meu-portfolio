@@ -1,5 +1,80 @@
-/* Garante um destaque visível quando qualquer elemento interativo recebe foco via teclado */
+/* ==========================================================================
+   Configurações Globais e Acessibilidade
+   ========================================================================== */
+
+/* Efeito de transição suave nas âncoras da página */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Redução de movimento para usuários que ativaram a preferência no SO */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  * {
+    transition: none !important;
+    transform: none !important;
+  }
+}
+
+/* Espaçamento superior das seções para compensar o cabeçalho fixo (sticky-top) ao navegar via âncoras */
+section {
+  scroll-margin-top: 80px; 
+}
+
+/* Tratamento de foco para os links-envelope (cards principais) para evitar duplo TAB */
+a.card-link-wrapper:focus {
+  outline: none !important;
+}
+
+/* Aplica o destaque ao card interno quando o link-envelope que o envolve recebe o foco */
+a.card-link-wrapper:focus > .card {
+  outline: 3px solid #0d6efd !important;
+  outline-offset: 2px !important;
+}
+
+/* Foco visível padrão para os demais elementos interativos via teclado */
 a:focus, button:focus, input:focus, .btn:focus {
   outline: 3px solid #0d6efd !important;
   outline-offset: 2px !important;
+}
+
+/* Estilo para links da navbar quando ativos (via ScrollSpy nativo do Bootstrap) */
+.navbar-nav .nav-link.active {
+  font-weight: bold;
+  color: #ffc107 !important;
+}
+
+
+/* ==========================================================================
+   Efeitos Visuais e Interações
+   ========================================================================== */
+
+/* Cards Principais: transição de elevação */
+.hover-card {
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.hover-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.15) !important;
+}
+
+/* Ícones de redes sociais: mudança suave de opacidade */
+.hover-icon {
+  transition: opacity 0.2s ease;
+}
+
+.hover-icon:hover, .hover-icon:focus {
+  opacity: 0.7;
+}
+
+/* Links da navegação (hover) */
+.hover-link {
+  transition: color 0.2s;
+}
+
+.hover-link:hover {
+  color: #ffc107 !important; 
 }

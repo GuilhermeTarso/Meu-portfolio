@@ -1,32 +1,43 @@
-# Portfólio Pessoal - Desenvolvimento Web
+# Portfólio Pessoal | Guilherme de Tarso - Versão Candidata 1.1
 
-Página de portfólio desenvolvida em formato *one-page layout* para apresentar informações pessoais, projetos desenvolvidos e canais de contato, aplicando boas práticas de semântica, responsividade e acessibilidade digital (WCAG).
+Este repositório armazena a versão estática e principal do meu portfólio profissional. Estruturado como um hub central, ele documenta e concentra as frentes da minha transição de carreira para as áreas de Suporte a Sistemas, Customer Operations e processos operacionais de plataformas SaaS B2B.
+
+*Nota: O endereço público atual exibe a versão 1.0. A publicação da versão 1.1 substituirá o layout existente após as validações finais.*
 
 ## 💻 Demonstração
 
-Acesse o projeto on-line pelo GitHub Pages: `https://guilhermetarso.github.io/Meu-portfolio/`
+Acesse o projeto online publicado via GitHub Pages: `https://guilhermetarso.github.io/Meu-portfolio/`
+
+## 📋 Arquitetura do Hub (Versão 1.1)
+
+O site estrutura logicamente meus passos profissionais e acadêmicos nas seguintes categorias:
+
+* **Sobre:** Direcionamento claro do meu perfil e objetivos com base na experiência ativa em resolução de problemas, suporte corporativo e sistemas.
+* **Portfólios Profissionais:** Exibição da estrutura planejada para cases práticos (Zendesk, HubSpot, KPIs, Kanban e IA), simulando cenários operacionais da EdificaSaaS.
+* **Projetos Acadêmicos:** Relatórios e exercícios realizados na graduação em Análise e Desenvolvimento de Sistemas.
+* **Treinamentos:** Trilha visual do mapeamento exclusivo de certificações, estudos de web e APIs.
+* **Contato:** Links diretos e integrados de e-mail e acesso às redes (LinkedIn, GitHub e WhatsApp).
 
 ## 📁 Arquivos incluídos
 
-* `index.html`: Estrutura semântica da página do portfólio (HTML5 + Bootstrap 5).
-* `estilo.css`: Regras personalizadas de estilo e destaque visível de foco para navegação via teclado.
-* `script.js`: Interatividade com manipulação do DOM (lista interativa, botão voltar ao topo e validação/alerta do formulário de contato).
-* `Gemini_Generated_Image_m24j24m24j24m24j.jfif.jfif`: Imagem de perfil usada na seção "Sobre mim".
-* `README.md`: Este arquivo com instruções e visualização do projeto.
+* `index.html`: Semântica HTML5. Menu responsivo utilizando *Navbar Toggler* e *ScrollSpy* nativo do Bootstrap (5.3.8). 
+* `estilo.css`: Documento voltado ao mapeamento e ajuste de foco de teclado, suporte restrito a *prefers-reduced-motion* e classes auxiliares de hover.
+* `script.js`: Arquivo restrito à manipulação DOM estrita. Opera a lógica da *Lista Interativa* (inserir/remover via clique e botão *Enter*) e atribui dinamicamente os atributos de acessibilidade no ScrollSpy.
+* `Gemini_Generated_Image_m24j24m24j24m24j.jfif.jfif`: Fotografia base de perfil.
+* `README.md`: Este documento central.
 
-## ✨ Funcionalidades
+## ✨ Recursos de Acessibilidade
 
-* Seção "Sobre mim" com imagem de perfil e descrição pessoal.
-* Exibição de projetos com breve descrição e tags de tecnologia.
-* Lista interativa dinâmica e botão "Voltar ao Topo" via JavaScript.
-* Formulário de contato funcional com alerta personalizado de confirmação.
-* Seção de redes profissionais com links diretos (E-mail, LinkedIn, GitHub e WhatsApp).
+- Botões visuais (ícones isolados) possuem propriedades textuais `aria-label`.
+- Percurso limpo por `TAB`, onde os *cards de navegação* transferem logicamente seu foco para elementos unificados (a tag âncora delimitadora).
+- Suporte a preferência do sistema operacional por redução de movimento, anulando transições e transformações de escala preventivamente.
+- Região sensível (`aria-live`) anexada à lista interativa técnica, projetada para anunciar adições e remoções de nós (nodes) a leitores de tela de maneira limpa.
+- Hierarquia estrita de *headings* (H1-H6).
 
-## 🚀 Como visualizar
+## 🚀 Como visualizar e testar localmente
 
-Você pode acessar diretamente pelo link do GitHub Pages acima ou clonar o repositório e abrir o arquivo `index.html` no navegador:
+Clone o repositório e abra o índice diretamente em seu navegador web (Google Chrome, Firefox, Edge). 
 
 ```bash
-git clone https://github.com/GuilhermeTarso/Meu-portfolio.git
+git clone [https://github.com/GuilhermeTarso/Meu-portfolio.git](https://github.com/GuilhermeTarso/Meu-portfolio.git)
 cd Meu-portfolio
-```
